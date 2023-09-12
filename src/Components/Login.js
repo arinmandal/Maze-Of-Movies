@@ -14,7 +14,6 @@ const Login = () => {
     // Form validation
     const message = checkValidData(name.current.value, email.current.value, password.current.value)
     setMessage(message)
-
   }
 
   function handleChange() {
