@@ -37,7 +37,12 @@ npx create-react-app maze-of-movies
 
 ## Project Feature 
 - Header
-- Main Movie Tailer in Background
-    
+- Main Movie Trailer in Background
     - Title and Description of the movie
-    -  
+- Routing App
+- Login Form with useRef Hooks
+- Sign Up Form
+- Form validation with Firebase
+- Firebase setup and deploy
+- [Firebase Auth ](https://firebase.google.com/docs/auth/web/)
+- Sign Up our first user.
