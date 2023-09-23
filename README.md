@@ -46,3 +46,7 @@ npx create-react-app maze-of-movies
 - Firebase setup and deploy
 - [Firebase Auth ](https://firebase.google.com/docs/auth/web/)
 - Sign Up our first user.
+    email - user@gmail.com
+    pass - Abc@1234
+- ReduxStore + userSlice  
+- Sign Out   
