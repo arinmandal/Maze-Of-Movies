@@ -1,5 +1,5 @@
+import { LOGIN_AVATAR } from "../Utils/constant";
 import { useRef, useState } from "react"
-import { useNavigate } from "react-router-dom";
 import { checkValidData } from "../Utils/validate";
 import Header from "./Header"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -7,7 +7,6 @@ import { auth } from "../Utils/firebase"
 import { useDispatch } from "react-redux";
 import { addUser } from "../ReduxStore/userSlice";
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignInForm, setSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -29,18 +28,15 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg"
+            photoURL: LOGIN_AVATAR,
           }).then(() => {
             // Profile updated!
             const { uid, email, displayName, photoURL } = auth.currentUser;
             dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
-            navigate("/browse")
           }).catch((error) => {
             // An error occurred
             setErrorMessage(error.message)
           });
-          console.log(user)
-
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -53,8 +49,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          console.log(user)
-          navigate("/browse")
           // ...
         })
         .catch((error) => {

@@ -1,18 +1,18 @@
-import { signOut } from "firebase/auth";
+import { useEffect } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../Utils/firebase"
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeUser } from "../ReduxStore/userSlice";
+import { addUser, removeUser } from "../ReduxStore/userSlice";
 const Header = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user)
-  console.log(user)
   const handleSignOut = () => {
     signOut(auth).then(() => {
       // Sign-out successful.
-      navigate("/")
+      // navigate("/")
       dispatch(removeUser)
     }).catch((error) => {
       // An error happened.
@@ -21,9 +21,31 @@ const Header = () => {
   }
 
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
+        navigate("/browse")
+      } else {
+        // User is signed out
+        // ...
+        dispatch(removeUser())
+        navigate("/")
+      }
+    });
+    // unsubscribe when component is unload
+    return () => unsubscribe()
+  }, [])
+
+
+
+
 
   return (
-    <div className="bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30   flex items-center justify-between px-10 py-2 bg-g">
+    <div className="bg-transparent bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 flex items-center justify-between px-10 py-2">
       <div className="logo">
         <h2 className="font-bold text-3xl tracking-wide text-yellow-500">
           MazeOfMovies🍿

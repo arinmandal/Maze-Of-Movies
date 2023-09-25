@@ -27,18 +27,21 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
------------------------------------------------------------------
+---
+
 ## Create React App
 
 ```
 npx create-react-app maze-of-movies
 ```
+
 ## Setup Tailwind
 
-## Project Feature 
+## Project Feature
+
 - Header
 - Main Movie Trailer in Background
-    - Title and Description of the movie
+  - Title and Description of the movie
 - Routing App
 - Login Form with useRef Hooks
 - Sign Up Form
@@ -46,7 +49,8 @@ npx create-react-app maze-of-movies
 - Firebase setup and deploy
 - [Firebase Auth ](https://firebase.google.com/docs/auth/web/)
 - Sign Up our first user.
-    email - user@gmail.com
-    pass - Abc@1234
-- ReduxStore + userSlice  
-- Sign Out   
+  email - hello123@gmail.com
+  pass - Hello123
+- ReduxStore + userSlice
+- Sign Out
+- Fix /browse and / route
