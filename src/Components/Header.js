@@ -45,8 +45,8 @@ const Header = () => {
 
 
   return (
-    <div className="bg-transparent bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 flex items-center justify-between px-10 py-2">
-      <div className="logo">
+    <div className="absolute w-screen z-50 flex justify-between px-10 py-2 items-center backdrop-blur-sm">
+      <div className="logo flex-shrink">
         <h2 className="font-bold text-3xl tracking-wide text-yellow-500">
           MazeOfMovies🍿
         </h2>

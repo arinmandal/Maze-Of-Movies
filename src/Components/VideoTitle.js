@@ -2,9 +2,9 @@ import { FiInfo } from "react-icons/fi";
 import { BsFillPlayFill } from "react-icons/bs";
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="aspect-video pt-60 px-28 absolute text-white bg-gradient-to-r from-black">
+    <div className="aspect-video pl-20 pt-72 absolute text-white bg-gradient-to-r from-black mb-2">
       <h1 className="font-bold text-3xl">{title}</h1>
-      <p className="w-4/12 pt-2">{overview}</p>
+      <p className="w-5/12 pt-2">{overview}</p>
       <div className="flex mt-5">
         <button className="bg-yellow-500 hover:bg-opacity-70 px-5 py-1 mr-4 rounded-md text-white font-bold text-lg flex items-center">
           <span className="px-1 text-lg">

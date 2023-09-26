@@ -66,7 +66,7 @@ const Login = () => {
   return (
     <div className='bg-main min-h-screen bg-cover'>
       <Header />
-      <div className="bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 mx-auto max-w-[380px] overflow-x-hidden rounded-lg mt-20">
+      <div className="bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 max-w-[380px] overflow-x-hidden rounded-lg relative mx-auto top-40">
         <form onSubmit={(e) => e.preventDefault()} className="flex flex-col p-12">
           <h2 className="text-white font-bold text-3xl">{isSignInForm ? "Sign In" : "Sign up"}</h2>
           {!isSignInForm && (<input type="text" ref={name} placeholder="Full Name" className="bg-[#333333] p-3 rounded-md mt-5 text-white" />)}
