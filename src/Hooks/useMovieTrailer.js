@@ -6,7 +6,7 @@ import { addTrailerVideo } from "../ReduxStore/movieSlice";
 const useMovieTrailer = (movieId) => {
   const dispatch = useDispatch();
   const getBackgroundVideos = async () => {
-    const data = await fetch("https://api.themoviedb.org/3/movie/"+ movieId +"/videos?language=en-US", API_OPTION);
+    const data = await fetch("https://api.themoviedb.org/3/movie/"+ movieId +"/videos?language=en-IN", API_OPTION);
     const json = await data.json();
     // console.log(json)
     const filterVideoData = json.results.filter(video => video.type === "Trailer")

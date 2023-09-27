@@ -37,13 +37,25 @@ npx create-react-app maze-of-movies
 
 ## Setup Tailwind
 
-## Project Feature
+## Project Structure 
+
+Header
+- Login
+    - /Browse
+      - MainContainer 
+        - VideoTitle
+        - VideoBackground
+      - SecondaryContainer 
+        - MovieList
+          - MovieCard  
+
+
 
 - Header
 - Main Movie Trailer in Background
   - Title and Description of the movie
 - Routing App
-- Login Form with useRef Hooks
+- Login Form using useRef Hooks
 - Sign Up Form
 - Form validation with Firebase
 - Firebase setup and deploy
@@ -54,3 +66,9 @@ npx create-react-app maze-of-movies
 - ReduxStore + userSlice
 - Sign Out
 - Fix /browse and / route
+- Build Main Container
+- Video Title
+- Video Background
+- Secondary Container
+- MovieList
+- MovieCard

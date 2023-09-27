@@ -1,3 +1,4 @@
+import { FaTelegramPlane } from "react-icons/fa";
 import { useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../Utils/firebase"
@@ -40,21 +41,18 @@ const Header = () => {
     return () => unsubscribe()
   }, [])
 
-
-
-
-
   return (
-    <div className="absolute w-screen z-50 flex justify-between px-10 py-2 items-center backdrop-blur-sm">
+    <div className="w-full absolute z-50 flex justify-between px-10 py-2 items-center backdrop-blur-sm">
       <div className="logo flex-shrink">
         <h2 className="font-bold text-3xl tracking-wide text-yellow-500">
           MazeOfMovies🍿
         </h2>
       </div>
-      {user && (<div className="user flex">
+      {user && (<div className="user flex items-center justify-between">
         <img className="h-8"
           src={user?.photoURL} alt="usericon" />
-        <button onClick={handleSignOut} className="bg-red-500 rounded-md px-2 ml-2 text-white font-semibold">Sign out</button>
+        <button onClick={handleSignOut} className="bg-red-500 rounded-md px-2 py-1 ml-2 text-white font-semibold">Sign out</button>
+
       </div>)}
 
     </div>
