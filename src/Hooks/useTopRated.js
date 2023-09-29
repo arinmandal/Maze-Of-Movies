@@ -1,10 +1,11 @@
 import { API_OPTION } from "../Utils/constant"
 import { useEffect } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addTopRatedMovies } from "../ReduxStore/movieSlice"
 
 
 const useTopRatedMovies = () => {
+  const topRatedMovies = useSelector((store) => store.movies.topRatedMovies)
   const dispatch = useDispatch();
   // Fetch data from TMDB Movies API 
   const getTopRatedMovies = async () => {
@@ -14,7 +15,7 @@ const useTopRatedMovies = () => {
   }
 
   useEffect(() => {
-    getTopRatedMovies();
+    !topRatedMovies && getTopRatedMovies();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

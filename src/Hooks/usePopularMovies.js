@@ -1,10 +1,12 @@
 import { API_OPTION } from "../Utils/constant"
 import { useEffect } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addPopularMovies } from "../ReduxStore/movieSlice"
 
 
 const usePopularMovies = () => {
+
+  const usePopularMovies = useSelector((store) => store.movies.popularMovies)
   const dispatch = useDispatch();
   // Fetch data from TMDB Movies API 
   const getPopularMovies = async () => {
@@ -14,7 +16,7 @@ const usePopularMovies = () => {
   }
 
    useEffect(() => {
-    getPopularMovies();
+    !usePopularMovies && getPopularMovies();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
