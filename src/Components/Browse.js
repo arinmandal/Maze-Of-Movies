@@ -5,8 +5,11 @@ import SecondContainer from "./SecondContainer";
 import usePopularMovies from "../Hooks/usePopularMovies";
 import useUpcomingMovies from "../Hooks/useUpcomingMovies";
 import useTopRatedMovies from "../Hooks/useTopRated";
+import AiSearch from "./AiSearch";
+import { useSelector } from "react-redux";
 const Browse = () => {
 
+  const EnableAiSearch = useSelector((store) => store.ai.enableAiSearch)
   useNowPlayingMovies();
   usePopularMovies();
   useUpcomingMovies();
@@ -14,8 +17,12 @@ const Browse = () => {
   return (
     <div className="">
       <Header />
-      <MainContainer />
-      <SecondContainer />
+      {EnableAiSearch ? (<AiSearch />) : (<>
+        <MainContainer />
+        <SecondContainer />
+      </>)}
+
+
     </div>
   )
 }
