@@ -11,9 +11,11 @@ const MainContainer = () => {
   // console.log(mainMovieBG)
   const { original_title, overview, id } = mainMovieBG;
   return (
-    <div className="w-full">
-      <VideoTitle title={original_title} overview={overview} />
-      <VideoBackground movieId={id} />
+    <div className="w-full h-full bg-black ">
+      <div className="video-bg sm:pt-0 md:pt-0 pt-20 ">
+        <VideoTitle title={original_title} overview={overview} />
+        <VideoBackground movieId={id} />
+      </div>
     </div>
   )
 }
