@@ -1,6 +1,8 @@
 # Maze Of Movies - The Movie App
 
-## Available Scripts
+https://github.com/arinmandal/Maze-Of-Movies/assets/54814983/90896918-ae82-4bc9-bf3f-cb49eb114738
+
+## Available Scripts!
 
 In the project directory, you can run:
 
