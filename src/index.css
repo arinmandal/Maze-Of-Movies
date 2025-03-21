@@ -1,3 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font: "Poppins", sans-serif;
+
+  --bg-image: url(".\assets\bg-image.jpg");
+
+  --color-primary: #030014;
+
+  --color-light-100: #cecefb;
+
+  --color-light-200: #a8b5db;
+
+  --color-gray-100: #9ca4ab;
+
+  --color-dark-100: #0f0d23;
+
+  --breakpoint-xs: 480px;
+}
+
+body {
+  font-family: var(--font);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+}
