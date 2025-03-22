@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@google/generative-ai": "^0.24.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@tailwindcss/vite": "^4.0.15",
     "@testing-library/jest-dom": "^5.17.0",
@@ -16,16 +17,15 @@
     "react-icons": "^4.11.0",
     "react-redux": "^8.1.2",
     "react-router-dom": "^6.15.0",
-    "tailwind-scrollbar": "^3.0.5",
     "tailwindcss": "^4.0.15",
     "web-vitals": "^2.1.4"
   },
- "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "deploy:firebase": "npm run build && firebase deploy"
-}
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy:firebase": "npm run build && firebase deploy"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

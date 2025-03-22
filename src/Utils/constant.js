@@ -4,13 +4,11 @@ export const API_OPTION = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY
+    Authorization: 'Bearer ' + import.meta.env.VITE_TMDB_KEY
   }
 };
 
 
 export const POSTER_URL = "https://image.tmdb.org/t/p/w500"
 
-export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY
-
-export const BG_URL = 'https://assets.nflxext.com/ffe/siteui/vlv3/42df4e1f-bef6-499e-87ff-c990584de314/5e7c383c-1f88-4983-b4da-06e14c0984ba/IN-en-20230904-popsignuptwoweeks-perspective_alpha_website_medium.jpg'
+export const GEMINI_KEY = import.meta.env.VITE_GEMINI_KEY
