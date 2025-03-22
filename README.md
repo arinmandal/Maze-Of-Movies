@@ -1,76 +1,62 @@
-# Maze Of Movies - The Movie App
+# Maze Of Movies
 
-https://github.com/arinmandal/Maze-Of-Movies/assets/54814983/90896918-ae82-4bc9-bf3f-cb49eb114738
+A movie search web application built with React 19, Vite, TMDB API, Firebase Authentication, Gemini API, and Tailwind 4. This project allows users to search for movies, view details, and explore trending films.
 
-## Available Scripts!
+## 🚀 Technologies Used
 
-In the project directory, you can run:
+- **React 19** – Modern UI library for building interactive interfaces.
+- **Vite** – Fast build tool for frontend development.
+- **Tailwind CSS 4** – Utility-first CSS framework.
+- **TMDB API** – Movie database for fetching movie details.
+- **Firebase Authentication** – User authentication and management.
+- **Gemini API** – Movie recommendation system.
 
-### `npm start`
+## 📌 Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before you begin, ensure you have the following installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) (Recommended: v18+)
+- [Git](https://git-scm.com/)
+- [Firebase](https://firebase.google.com/) (Set up a project and enable authentication)
+- TMDB API Key (Sign up at [TMDB](https://www.themoviedb.org/))
+- Gemini API Key (Get access from Google's Gemini API)
 
-### `npm test`
+## 🔧 Installation & Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the Repository**
 
-### `npm run build`
+   ```sh
+   git clone -b dev https://github.com/arinmandal/Maze-Of-Movies.git
+   cd Maze-Of-Movies
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install Dependencies**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```sh
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Create an `.env` File**
+   Create a `.env` file in the project root and add the following:
 
----
+   ```env
+   VITE_TMDB_API_KEY=your_tmdb_api_key
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+   VITE_GEMINI_API_KEY=your_gemini_api_key
+   ```
 
-## Create React App
+4. **Run the Development Server**
+   ```sh
+   npm run dev
+   ```
+   The app will be available at `http://localhost:5173/`
 
+## 🛠 Build for Production
+
+```sh
+npm run build
 ```
-npx create-react-app maze-of-movies
-```
 
-## Setup Tailwind
-
-## Project Structure 
-
-Header
-- Login
-    - /Browse
-      - MainContainer 
-        - VideoTitle
-        - VideoBackground
-      - SecondaryContainer 
-        - MovieList
-          - MovieCard  
-
-
-
-- Header
-- Main Movie Trailer in Background
-  - Title and Description of the movie
-- Routing App
-- Login Form using useRef Hooks
-- Sign Up Form
-- Form validation with Firebase
-- Firebase setup and deploy
-- [Firebase Auth ](https://firebase.google.com/docs/auth/web/)
-- Sign Up our first user.
-  email - hello123@gmail.com
-  pass - Hello123
-- ReduxStore + userSlice
-- Sign Out
-- Fix /browse and / route
-- Build Main Container
-- Video Title
-- Video Background
-- Secondary Container
-- MovieList
-- MovieCard 
+The production files will be in the `dist/` directory.
