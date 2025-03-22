@@ -25,5 +25,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-blend-mode: multiply;
+  background: linear-gradient(
+      180deg,
+      rgba(26, 23, 41, 0.9) 0%,
+      rgba(143, 141, 153, 0.9) 35%,
+      rgba(81, 73, 88, 0.9) 100%
+    ),
+    url(".\assets\bg-image.jpg");
   color: #fff;
 }
