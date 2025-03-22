@@ -6,9 +6,7 @@ const MainContainer = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   // Early Returns
   if (!movies) return;
-
   const mainMovieBG = movies[0];
-  // console.log(mainMovieBG)
   const { original_title, overview, id } = mainMovieBG;
   return (
     <div className="w-full h-full bg-black ">

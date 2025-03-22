@@ -16,12 +16,12 @@ const Browse = () => {
   useTopRatedMovies();
   return (
     <div className="">
+
       <Header />
       {EnableAiSearch ? (<AiSearch />) : (<>
         <MainContainer />
         <SecondContainer />
       </>)}
-
 
     </div>
   )

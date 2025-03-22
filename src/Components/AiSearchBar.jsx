@@ -42,12 +42,9 @@ const AiSearchBar = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-4 mt-32">
-      <h2 className="text-2xl font-semibold mb-4 text-center text-white">
-        Find Your Perfect Movie Match
+      <h2 className="mx-auto max-w-2xl text-center text-4xl font-bold leading-tight tracking-[-1%] text-white sm:text-[64px] sm:leading-[76px]">
+        Find Your Perfect <span className="bg-linear-to-r from-[#f3d52d] to-[#ffee02] bg-clip-text text-transparent">Movie</span> Match
       </h2>
-      <p className="text-lg text-gray-300 mb-1 text-center">
-        Just type your mood, and I'll suggest the best movies!
-      </p>
       <form
         onSubmit={(e) => e.preventDefault()}
         className="w-full sm:w-1/2 md:w-1/2 bg-gray-900 rounded-lg grid grid-cols-12 gap-2 p-4"
