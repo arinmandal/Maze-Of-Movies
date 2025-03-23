@@ -52,7 +52,7 @@ const Header = () => {
         <div className="flex items-center space-x-2 sm:space-x-4">
           <button
             onClick={handleAiSearch}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l text-white rounded-md px-3 py-1 sm:px-4 sm:py-2 flex items-center"
+            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l text-white rounded-md px-3 py-1 sm:px-4 sm:py-2 flex items-center cursor-pointer"
           >
             <span className="text-sm sm:text-base">
               {enableAiSearch ? "Home" : "AI Search"}
@@ -80,7 +80,7 @@ const Header = () => {
           />
           <button
             onClick={handleSignOut}
-            className="bg-red-600 hover:bg-red-700 text-white text-sm rounded-md px-3 py-1 sm:px-4 sm:py-2  sm:text-base"
+            className="bg-red-600 hover:bg-red-700 text-white text-sm rounded-md px-3 py-1 sm:px-4 sm:py-2  sm:text-base cursor-pointer"
           >
             Sign Out
           </button>

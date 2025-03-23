@@ -86,9 +86,9 @@ const Login = () => {
             </div>
           )}
           <p className="text-red-600 font-bold text-xs">{errorMessage}</p>
-          <button className="bg-red-600 rounded-md font-bold text-white p-2 mt-4" onClick={handleClickBtn}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
+          <button className="bg-red-600 rounded-md font-bold text-white p-2 mt-4 cursor-pointer" onClick={handleClickBtn}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
           <div className="font-light mt-2">
-            <p className="text-slate-300" onClick={() => setSignInForm(!isSignInForm)}>
+            <p className="text-slate-300 cursor-pointer" onClick={() => setSignInForm(!isSignInForm)}>
               {isSignInForm ? "New to MazeOfMovies?" : "Already a user?"} 
               <span className="text-white font-bold ml-1 hover:underline cursor-pointer">
                 {isSignInForm ? "Sign up now." : "Sign in"}

@@ -56,7 +56,7 @@ const AiSearchBar = () => {
           placeholder="What would you like to watch today?"
         />
         <button
-          className="col-span-3 bg-yellow-500 text-black font-semibold rounded-md hover:bg-yellow-600 transition-colors py-3"
+          className="col-span-3 bg-yellow-500 text-black font-semibold rounded-md hover:bg-yellow-600 transition-colors py-3 cursor-pointer"
           onClick={AiSearchClick}
         >
           Search
